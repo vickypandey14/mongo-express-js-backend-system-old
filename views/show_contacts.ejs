@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <% if(contacts.length>0){ %>
+
+        <table border="1" width="50%"> 
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% contacts.forEach( (item)=>{ %>
+                    <tr>
+                        <td><%= item.name %></td>
+                        <td><%= item.email %></td>
+                        <td><%= item.message %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+
+        </table>
+
+        <% }
+    
+        else{ %>
+            <h2>No Records Found</h2>
+        <% } %>
+    
+</body>
+</html>
